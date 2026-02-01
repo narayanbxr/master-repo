@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Cube Test</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <canvas id="three-canvas"></canvas>
+ <div id="ui-panel">
+  <h3>System Control Panel</h3>
+
+  <!-- ROTATION -->
+  <label>Rotation Speed</label>
+  <input type="range" id="speedSlider" min="0" max="5" step="0.1" value="1">
+  <div class="meter">
+    <div id="speedMeter"></div>
+  </div>
+  <p>Speed: <span id="speedValue">1.0</span></p>
+
+  <hr />
+
+  <!-- DIMENSIONS -->
+  <h4>Dimensions</h4>
+  <label>Length <input type="number" id="lengthInput" value="1" step="0.1"></label>
+  <label>Breadth <input type="number" id="breadthInput" value="1" step="0.1"></label>
+  <label>Height <input type="number" id="heightInput" value="1" step="0.1"></label>
+
+  <button id="calculateBtn">Apply</button>
+
+  <p>Volume: <span id="volumeValue">1</span></p>
+  <div class="meter">
+    <div id="volumeMeter"></div>
+  </div>
+
+  <p>Surface Area: <span id="areaValue">6</span></p>
+
+  <hr />
+
+<h4>Rotation Gauge</h4>
+
+<div class="gauge">
+  <div class="gauge-bg"></div>
+  <div class="gauge-needle" id="gaugeNeedle"></div>
+  <div class="gauge-center"></div>
+</div>
+
+<p>RPM (relative): <span id="rpmText">0</span></p>
+
+  <hr />
+  <button id="resetBtn">Reset View</button>
+</div>
+<canvas id="graphCanvas" width="300" height="200"></canvas>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
